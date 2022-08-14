@@ -11,7 +11,7 @@ namespace api.Controllers
          public async Task<IEnumerable<GitHubApiModel>> GetRepositoriesGithub(string profile, int pageNumber, string language, string repositoryName, DateTime createdAt)
         {
 
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/orgs/takenet/repos");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/users/" + profile + "/repos?" + "page=" + pageNumber);
             request.Headers.Add("accept", "application/vnd.github+json");
             request.Headers.Add("User-Agent", "jessikasousa");
 
