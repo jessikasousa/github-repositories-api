@@ -12,7 +12,7 @@ namespace api.Controllers
         {
 
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/users/" + profile + "/repos?" + "page=" + pageNumber);
-            request.Headers.Add("Accept", "application/vnd.github.v4+json");
+            request.Headers.Add("Accept", "application/vnd.github.v6+json");
             request.Headers.Add("User-Agent", "jessikasousa");
 
             var client = new HttpClient();
